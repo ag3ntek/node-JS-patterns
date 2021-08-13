@@ -1,8 +1,8 @@
 import { pipeline } from "stream";
-import { createWriteStream, createReadStream } from "fs";
+import { createReadStream } from "fs";
 import split from 'split';
 import superagent from 'superagent';
-import { ParallelStream } from "./parallel-stream";
+import { ParallelStream } from "./parallel-stream.js";
 
 pipeline(
     createReadStream(process.argv[2]),
@@ -19,14 +19,14 @@ pipeline(
             try {
                 await superagent.head(url, { timeout: 5 * 1000}) // Método http que retorna unicamente los headers, por ejemplo puede solicitar
                                                                  // El tamaño de un archivo sin necesariamente descargarlo
-                push(`${url} is up`);                                                                 
+                push(`${url} is up\n`);                                                                 
             } catch (err) {
-                push(`${url} is down`);
+                push(`${url} is down\n`);
             }
             done();
         }
     ),
-    createWriteStream('results.txt'),
+    process.stdout,
     (err) => {
         if(err) {
           console.log(err);

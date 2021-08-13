@@ -1,0 +1,15 @@
+{
+  "name": "merge-stream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "merge-files.js",
+  "type": "module", 
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "split": "^1.0.1"
+  }
+}

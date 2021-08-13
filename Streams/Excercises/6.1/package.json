@@ -1,0 +1,12 @@
+{
+  "name": "6.1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "data-compress-efficiency.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
