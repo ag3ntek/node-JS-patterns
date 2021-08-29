@@ -1,0 +1,16 @@
+{
+  "name": "config-file",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ini": "^2.0.0",
+    "object-path": "^0.11.5"
+  }
+}
